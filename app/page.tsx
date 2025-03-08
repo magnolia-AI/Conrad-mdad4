@@ -1,5 +1,6 @@
-import { EventCard } from "./components/event-card";
-import { events } from "./data/events";
+'use client';
+import { EventCard } from "@/components/event-card";
+import { events } from "@/data/events";
 export default function Home() {
   return (
     <main className="min-h-screen bg-background">
