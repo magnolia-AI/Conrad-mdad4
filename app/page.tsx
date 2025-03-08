@@ -1,7 +1,10 @@
 'use client';
-import { EventCard } from "@/components/event-card.tsx";
+import { EventCard } from "@/app/components/event-card";
 import { events } from "@/app/data/events";
+import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 export default function Home() {
+  const router = useRouter();
   return (
     <main className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -13,6 +16,13 @@ export default function Home() {
           <p className="mt-6 text-xl text-muted-foreground max-w-[600px] mx-auto">
             Discover and book the most exciting events in your area.
           </p>
+          <Button 
+            className="mt-8"
+            size="lg"
+            onClick={() => router.push("/create")}
+          >
+            Create New Event
+          </Button>
         </div>
       </section>
       {/* Events Grid */}
